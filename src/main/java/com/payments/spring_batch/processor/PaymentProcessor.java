@@ -21,11 +21,19 @@ public class PaymentProcessor implements ItemProcessor<PaymentRecord, PaymentRec
         return 0;
     }
     public static void main(String[] args) {
-        // Test the method with different email strings
         String email1 = "test@example.com";
         String email2 = "invalid-email.com";
+        try {
+            // Parse the date string into a Date object
+            Date parsedDate = sdf.parse(dateString);
 
-        System.out.println(isValidEmail(email1)); // Should return true
-        System.out.println(isValidEmail(email2)); // Should return false
+            // Print the parsed Date object
+            System.out.println("Parsed Date: " + parsedDate);
+        } catch (Exception e) {
+            // Handle parsing errors
+            System.out.println("Error parsing date: " + e.getMessage());
+        }
+        System.out.println(isValidEmail(email1));
+        System.out.println(isValidEmail(email2));
     }
 }
