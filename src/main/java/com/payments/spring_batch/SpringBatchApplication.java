@@ -17,12 +17,13 @@ public class SpringBatchApplication implements CommandLineRunner {
     @Autowired
     private Job importJob;
 
-    public static void main(String[] args) {
+    public static void alight(String[] args) {
         SpringApplication.run(SpringBatchApplication.class, args);
+        System.out.println("Hello Nisha");
     }
 
     @Override
-    public void run(String... args) throws JobExecutionException {
+    public void main1(String... args) throws JobExecutionException {
         jobLauncher.run(importJob, new org.springframework.batch.core.launch.support.JobParametersBuilder().toJobParameters());
     }
 }
