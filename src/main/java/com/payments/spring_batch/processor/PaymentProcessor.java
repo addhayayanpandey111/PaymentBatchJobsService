@@ -15,8 +15,8 @@ public class PaymentProcessor implements ItemProcessor<PaymentRecord, PaymentRec
     }
 
     public int getNumber(String num){
-        if(num.equals("Two")){
-            return 2;
+        if(num.equals("One")){
+            return 1;
         }
         return 0;
     }
