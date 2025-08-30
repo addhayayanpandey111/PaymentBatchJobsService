@@ -20,7 +20,14 @@ public class PaymentProcessor implements ItemProcessor<PaymentRecord, PaymentRec
         }
         return 0;
     }
-    public static void main(String[] args) {
+
+    public int getNumberThree(String num){
+        if(num.equals("Three")){
+            return 1;
+        }
+        return 0;
+    }
+    public static void (String mychanges) {
         // Test the method with different email strings
         String email1 = "test@example.com";
         String email2 = "invalid-email.com";
