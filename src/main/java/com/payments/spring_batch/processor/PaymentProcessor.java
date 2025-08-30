@@ -29,6 +29,21 @@ public class PaymentProcessor implements ItemProcessor<PaymentRecord, PaymentRec
 
 
     public static void (String mychanges) {
+        // Test the method with different email strings
+        String email1 = "test@example.com";
+        String email2 = "invalid-email.com";
+        try {
+            // Parse the date string into a Date object
+            Date parsedDate = sdf.parse(dateString);
+
+            // Print the parsed Date object
+            System.out.println("Parsed Date: " + parsedDate);
+        } catch (Exception e) {
+            // Handle parsing errors
+            System.out.println("Error parsing date: " + e.getMessage());
+        }finally {
+            System.out.println("Inside finally block");
+        }
         System.out.println(isValidEmail(email1));
         System.out.println(isValidEmail(email2));
     }
