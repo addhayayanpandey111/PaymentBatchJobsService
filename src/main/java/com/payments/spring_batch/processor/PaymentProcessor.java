@@ -20,4 +20,12 @@ public class PaymentProcessor implements ItemProcessor<PaymentRecord, PaymentRec
         }
         return 0;
     }
+    public static void main(String[] args) {
+        // Test the method with different email strings
+        String email1 = "test@example.com";
+        String email2 = "invalid-email.com";
+
+        System.out.println(isValidEmail(email1)); // Should return true
+        System.out.println(isValidEmail(email2)); // Should return false
+    }
 }
