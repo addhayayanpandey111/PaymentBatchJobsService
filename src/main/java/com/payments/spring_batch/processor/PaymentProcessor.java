@@ -41,6 +41,8 @@ public class PaymentProcessor implements ItemProcessor<PaymentRecord, PaymentRec
         } catch (Exception e) {
             // Handle parsing errors
             System.out.println("Error parsing date: " + e.getMessage());
+        }finally {
+            System.out.println("Inside finally block");
         }
         System.out.println(isValidEmail(email1));
         System.out.println(isValidEmail(email2));
