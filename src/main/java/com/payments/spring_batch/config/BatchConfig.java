@@ -1,5 +1,7 @@
 package com.payments.spring_batch.config;
 
+import com.payments.spring_batch.model.PaymentRecord;
+import com.payments.spring_batch.processor.PaymentProcessor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.BatchConfigurer;
@@ -10,6 +12,7 @@ import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
+import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.context.annotation.Bean;
