@@ -28,7 +28,7 @@ public class PaymentProcessor implements ItemProcessor<PaymentRecord, PaymentRec
     }
 
 
-    public static void (String mychanges) {
+    public static void main(String mychanges) {
         // Test the method with different email strings
         String email1 = "test@example.com";
         String email2 = "invalid-email.com";
