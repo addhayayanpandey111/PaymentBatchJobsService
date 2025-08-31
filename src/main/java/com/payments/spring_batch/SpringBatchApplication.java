@@ -58,15 +58,35 @@ public class SpringBatchApplication implements CommandLineRunner {
 
     public class ReverseString {
         public static void main(String[] args) {
-            String original = "Hello World";
+            String str = "Hello World";
             String reversed = "";
 
-            for (int i = original.length() - 1; i >= 0; i--) {
-                reversed += original.charAt(i);
+            for (int i = str.length() - 1; i >= 0; i--) {
+                reversed += str.charAt(i);
             }
 
-            System.out.println("Original: " + original);
+            System.out.println("Original: " + str);
             System.out.println("Reversed: " + reversed);
         }
     }
+
+    public class PalindromeChecker {
+        public static void main(String[] args) {
+            String input = "madam";
+            String reversed = "";
+
+            // Reverse the input string
+            for (int i = input.length() - 1; i >= 0; i--) {
+                reversed += input.charAt(i);
+            }
+
+            // Check if input equals reversed
+            if (input.equals(reversed)) {
+                System.out.println(input + " is a palindrome.");
+            } else {
+                System.out.println(input + " is not a palindrome.");
+            }
+        }
+    }
+
 }
