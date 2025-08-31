@@ -26,4 +26,33 @@ public class SpringBatchApplication implements CommandLineRunner {
     public void main1(String... args) throws JobExecutionException {
         jobLauncher.run(importJob, new org.springframework.batch.core.launch.support.JobParametersBuilder().toJobParameters());
     }
+    public class ReverseArray {
+        public static void main(String[] args) {
+            int[] original = {1, 2, 3, 4, 5};
+
+            // Print original array
+            System.out.print("Original array: ");
+            for (int num : original) {
+                System.out.print(num + " ");
+            }
+
+            // Reverse the array in-place
+            int start = 0;
+            int end = original.length - 1;
+            while (start < end) {
+                int temp = original[start];
+                original[start] = original[end];
+                original[end] = temp;
+                start++;
+                end--;
+            }
+
+            // Print reversed array
+            System.out.print("\nReversed array: ");
+            for (int num : original) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+
 }
